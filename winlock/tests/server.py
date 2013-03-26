@@ -45,7 +45,6 @@ class TestServer(unittest.TestCase):
           socket.socket(), server_key=self.server_key(),
           server_certificate=self.server_certificate(),
           client_certificate=self.client_certificate(),
-          locker=desktop_locker(),
           number_of_connections = 2)
     s.start()
     time.sleep(2)
