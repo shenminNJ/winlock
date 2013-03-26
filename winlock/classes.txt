@@ -1,0 +1,23 @@
+classes:
+ (lock_commands.py)
+ 
+  https_command_server_thread   -> a thread that spawns a listener
+  https_command_listener        -> (has a locker) a blocking loop that receives commands 
+						and passes them to request handlers WITH LOCKER
+  LockingHTTPRequestHandler     -> many instances get created, parse command, call locker, die
+  https_command_client          -> creates lock_commands, sends to listener (server)
+  command_for_locking_server
+    children: lock_command, unlock_command
+  command_response
+ 
+ (screenlock.py)
+  OverlayFrame     
+
+ (windows_locker.py)
+  desktop_locker   
+  keyboard_locker
+  screen_locker    -> creates an OverlayFrame in a thread, calls show()/hide()TEST
+TEST
+TEST
+TEST
+TEST

@@ -1,0 +1,4 @@
+Add setup.py to root
+Add __init__.py to winlock/winlock
+
+Add more tests
