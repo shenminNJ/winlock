@@ -13,17 +13,17 @@ Windows Machine: Windows box that is running rsync server through cygwin
 * Source code location: c:\Development\projects\winlock
 * Rsync Server Command: rsync -v --config=rsyncd.conf --daemon --no-detach
 * Running the go.bat file (a simple loop that waits for an nc connection, then runs tests)
-* rsyncd.conf file: 
+* rsyncd.conf file:
 
-    use chroot = no
-    strict modes = no
-    max connections = 1
-    hosts allow *
+        use chroot = no
+        strict modes = no
+        max connections = 1
+        hosts allow *
 
-    [projects]
-    list = no
-    lock file = rsyncd.lockfile
-    log file = rsyncd.log
-    read only = no 
-    path = /cygdrive/c/Development/projects
+        [projects]
+        list = no
+        lock file = rsyncd.lockfile
+        log file = rsyncd.log
+        read only = no 
+        path = /cygdrive/c/Development/projects
 
